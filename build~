@@ -1,0 +1,7 @@
+#!/bin/bash
+
+echo "building..."
+nasm -f elf32 Lab0xFF-Assemblipede.asm
+echo "linking..."
+ld -m elf_i386 Lab0xFF-Assemblipede.o -o go -lc -lncurses -I /lib/ld-linux.so.2
+
